@@ -1,0 +1,53 @@
+<<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{css/bootstrap.css}"/>
+</head>
+<body>
+<div class="container">
+<h2>welcome to products Confirmation Page</h2>
+
+<!-- declaration formulaire de ajouter des produits -->
+
+<div class="container col-md-8 col-md-offset-2 col-xs-12  ">
+<div class="panel panel-primary">
+<div class="panel-heading">Confirmation</div>
+<div class="panel-body">
+
+    
+        <div class="form-group">
+            <label class="control-label">Id</label>
+           <label th:text="${produit.id}"></label>
+       
+        </div>
+            
+       
+    <div class="form-group">
+            <label class="control-label">Designation</label>
+           <label th:text="${produit.designation}"></label>
+       
+        </div>
+        
+        
+         <div class="form-group">
+            <label class="control-label">Prix</label>
+           <label th:text="${produit.prix}"></label>
+        
+        </div>
+        
+         <div class="form-group">
+            <label class="control-label">Quantite</label>
+           <label th:text="${produit.quantite}"></label>
+       
+        </div>
+      
+<div>
+       
+ </div>
+ </div>
+  
+</div>
+</body>
+</html>

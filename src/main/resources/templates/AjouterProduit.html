@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www/ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
+<style>
+span{
+font-weight: bolder ;
+color: red
+}
+</style>
+</head>
+<body>
+<div class="container" layout:fragment="content">
+<h2>welcome to products Ajouter Page</h2>
+
+<!-- declaration formulaire de ajouter des produits -->
+
+
+<div class="container col-md-8 col-md-offset-2 col-xs-12  ">
+<div class="panel panel-primary">
+<div class="panel-heading ">Ajouter Produit</div>
+<div class="panel-body">
+
+    <form method="POST" th:action="@{save}">
+        <div class="form-group">
+            <label class="control-label">Designation</label>
+            <input type="text" name="Designation" class="form-control" th:value="${produit.designation}">
+        <span th:errors="${produit.designation}"></span>
+        </div>
+            
+       
+   <div class="form-group">
+            <label class="control-label">Prix</label>
+            <input type="text" name="Prix" class="form-control" th:value="${produit.prix}">
+        <span class="" th:errors="${produit.prix}"></span>
+            
+        </div>
+       <div class="form-group">
+            <label class="control-label">Quantite</label>
+            <input type="text" name="Quantite" class="form-control" th:value="${produit.quantite}">
+        <span th:errors="${produit.quantite}"></span>
+            
+        </div>
+        
+      
+<div>
+        <input type="submit" value="save" class="bnt btn-primary "></div>
+ 
+    </form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
